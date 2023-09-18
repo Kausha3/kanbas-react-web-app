@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <ul>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Help</a></li>
+
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="grade.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </td>
+
+        <td>
+            <select>
+                <option selected value="speedgrader">SpeedGrader</option>
+            </select>
+            <h4> Assignment Name </h4>
+            <form>
+                <input id="text-fields-name" placeholder="" value="A1 - ENV + HTML"/><br/>
+                <textarea cols="30" rows="3">This is the assignment description</textarea>
+
+              <div>
+                <label for="points">Points</label>
+                <input  id="points" value="100">
+              </div>
+
+              <div>
+                <label for="assignGrp">Assignment Group</label>
+                <select id="assignGrp"><option selected value="ASSIGNMENT">ASSIGNMENTS</option></select>
+              </div>
+
+              <div>
+                <label for="dispGrade">Display Grade as</label>
+                <select id="dispGrade"><option selected value="per">Percentage</option></select>
+              </div>
+
+              <div>
+                <label for="subtype">Submission Type</label>
+                <select id="subtype"><option selected value="subType">Online</option></select>
+              </div>
+
+              <label>Online Entry Options:</label>
+              <br/>
+              <input type="checkbox" value="Text Entry"
+                     name="check-genre" id="chkbox-comedy" />
+              <label for="chkbox-comedy">Text Entry</label>    <br/>
+              <input type="checkbox" value="DRAMA"
+                     name="check-genre" id="chkbox-drama"/>
+              <label for="chkbox-drama">Website URL</label>    <br/>
+              <input type="checkbox" value="SCIFI"
+                     name="check-genre" id="chkbox-scifi" checked/>
+              <label for="chkbox-scifi">Media Recordings</label> <br/>
+              <input type="checkbox" value="FANTASY"
+                     name="check-genre" id="chkbox-fantasy"/>
+              <label for="chkbox-fantasy">Student Annotation</label>
+              <input type="checkbox" value="FANTASY"
+                     name="check-genre" id="chkbox-file"/>
+              <label for="chkbox-file">File Uploads</label>
+
+              <div>
+                <label for="subat">Submission Attempts</label>
+                <select id="subat"><option selected value="subat">Unlimited</option></select>
+              </div>
+
+              <div>
+                <label for="plag">Plagiarism Review</label>
+                <select id="plag"><option selected value="plag">None</option></select>
+              </div>
+
+              <label>Group Assignment</label>
+              <br/>
+              <input type="checkbox" value="Text Entry"
+                     name="check-genre" id="check" />
+              <label for="chkbox-comedy">This is a group assignment </label>    <br/>
+
+              <label>Peer Reviews</label>
+              <br/>
+              <input type="checkbox" value="Text Entry"
+                     name="check-genre" id="peer" />
+              <label for="chkbox-comedy">Require Peer Reviews </label>    <br/>
+
+              <div>
+                <label for="assign">Assign</label><br>Assign To<br>
+                <input  id="assign" value="Everyone">
+              </div>
+
+            <div>
+                <label for="dueDate">Due:</label>
+                <input type="date" id="dueDate" name="dueDate">
+            </div>
+            <div>
+                <label for="availableDate">Available from:</label>
+                <input type="date" id="availableDate" name="availableDate">
+            </div>
+            <div>
+                <label for="untilDate">Until:</label>
+                <input type="date" id="untilDate" name="untilDate">
+            </div>
+
+            <!-- Add more input fields for other fields as needed -->
+            <div>
+                <button id="cancelBtn">Cancel</button>
+                <button id="saveBtn">Save</button>
+            </div>
+            </form>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
