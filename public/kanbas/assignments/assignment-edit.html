@@ -2,46 +2,270 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Assignment - edit</title>
+    <script src="https://kit.fontawesome.com/9512067f90.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link href="index.css"
+          rel="stylesheet"/>
 </head>
 <body>
-<table>
+    <nav aria-label="breadcrumb" class="custom-breadcrumb ">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><i class="fas fa-bars"></i></li>
+            <li class="breadcrumb-item">Course Name</li>
+            <li class="breadcrumb-item">Term</li>
+            <li class="breadcrumb-item section-crumb">Section</li>
+            <li class="breadcrumb-item active section-crumb" aria-current="page">Assignments</li>
+            <li class="breadcrumb-item">A1 - ENV</li>
+            
+        </ol>
+        <hr class="my-1">
+        
+    </nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-1 Navigation">
+            <div class="link-container">
+                <!-- ... (left Navigation content unchanged) ... -->
+
+                    <ul>
+                        <li>
+                            <div class="block-container">
+                            <p><i class="fa-regular fa-user" id="custom-user"></i><br>
+                            <a href="profile/index.html">Account</a></p>
+                        </div>
+                        </li>
+    
+                        <li><div class="block-container"> <p><i class="fa-solid fa-gauge" id="custom-board"></i> <br>
+                            <a href="#">Dashboard</a></p></div></li>
+    
+                        <li class="navSelected">
+                            <div class="block-container"><p><i class="fa-solid fa-book" id="custom-book"></i>
+                            <br>
+                            <a href="#">Courses</a>
+                        </p>
+                    </div>
+                    </li>
+    
+                        <li><div class="block-container">
+                            <p><i class="fa-solid fa-calendar-days" id="custom-calendar"> </i><br>
+                            <a href="#">Calendar</a>
+                        </p></div></li>
+    
+                        <li><div class="block-container"><p><i class="fa-solid fa-inbox" id="custom-icon"></i> <br>
+                            <a href="#">Inbox</a></p></div></li>
+    
+                        <li><div class="block-container"><p><i class="fa-regular fa-clock" id="custom-clock"> </i> <br>
+                            <a href="#">History</a></p></div></li>
+    
+                        <li><div class="block-container"><p><i class="fa-solid fa-tv" id="custom-studio"></i> <br>
+                            <a href="#">Studio</a></div></li>
+    
+                        <li><div class="block-container"><p><i class="fa-solid fa-right-from-bracket" id="custom-common"></i><br>
+                            <a href="#">Commons</a></div></li>
+                        </p>
+                        <li><div class="block-container"><p><i class="fa-solid fa-circle-question" id="custom-help"></i>
+                            <br> <a href="#">Help</a></p></div>
+                        </li>
+                        </ul>
+            </div>
+        </div>
+        <div class="col-2 account-navigation">
+                
+            <ul class="list-group">
+                <!-- ... (account navigation content unchanged) ... -->
+            
+                        <li><a href="../home.html">Home</a></li>
+                        <li><a href="#">Modules</a></li>
+                        <li><a href="#">Piazza</a></li>
+                        <li><a href="#">Zoom Meetings</a></li>
+                        <li class="selected"><a href="index.html">Assignments</a></li>
+                        <li><a href="#">Quizzes</a></li>
+                        <li><a href="../courses/grades.html">Grades</a></li>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Panopto Video</a></li>
+                        <li><a href="#">Discussions</a></li>
+                        <li><a href="#">Announcements</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Rubrics</a></li>
+                        <li><a href="#">Outcomes</a></li>
+                        <li><a href="#">Collaborations</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Settings</a></li>
+    
+            </ul>
+        </div>
+
+        <div class="col-8">
+            <form>
+                <h3>Assignment Name</h3>
+
+                <div class="form-group row mt-3">
+                    <label for="assignmentName" class="col-sm-2 col-form-label">Assignment Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="assignmentName" placeholder="Enter assignment name" Value="A1-ENV + HTML">
+                    </div>
+                </div>
+
+                <div class="form-group row mt-3">
+                    <label for="description" class="col-sm-2 col-form-label">Description</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="description" rows="4" placeholder="Enter description" Value="">This is the assignment description</textarea>
+                    </div>
+                </div>
+
+                <!-- Points Field -->
+                <div class="form-group row">
+                    <label for="points" class="col-sm-2 col-form-label">Points</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="points" placeholder="Enter points" value="100">
+                    </div>
+                </div>
+        
+                <!-- Assignment Group Field -->
+                <div class="form-group row">
+                    <label for="assignmentGroup" class="col-sm-2 col-form-label">Assignment Group</label>
+                    <div class="col-sm-10">
+                        <select id="assignmentGroup" class="form-control">
+                            <option selected>ASSIGNMENTS</option>
+                    
+                        </select>
+                    </div>
+                </div>
+        
+                <!-- Display Grade as Field -->
+                <div class="form-group row">
+                    <label for="displayGrade" class="col-sm-2 col-form-label">Display Grade as</label>
+                    <div class="col-sm-10">
+                        <select id="displayGrade" class="form-control">
+                            <option selected>Percentage</option>
+                
+                        </select>
+                    </div>
+                </div>
+        
+                <!-- Submission Type Field -->
+                <div class="form-group row">
+                    <label for="submissionType" class="col-sm-2 col-form-label">Submission Type</label>
+                    <div class="col-sm-10">
+                        <select id="submissionType" class="form-control">
+                            <option selected>Online</option>
+                           
+                        </select>
+                    </div>
+                </div>
+        
+                <!-- Assign Field -->
+                <div class="form-group row">
+                    <label for="assign" class="col-sm-2 col-form-label">Assign</label>
+                    <div class="col-sm-10">
+                        <select id="assign" class="form-control">
+                            <option selected>Online</option>
+
+                        </select>
+                    </div>
+                </div>
+        
+                <!-- Due Date Field -->
+                <div class="form-group row">
+                    <label for="dueDate" class="col-sm-2 col-form-label">Due</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="dueDate">
+                    </div>
+                </div>
+        
+                <!-- Available From Date Field -->
+                <div class="form-group row">
+                    <label for="availableFrom" class="col-sm-2 col-form-label">Available from</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="availableFrom">
+                    </div>
+                </div>
+        
+                <!-- Until Date Field -->
+                <div class="form-group row">
+                    <label for="untilDate" class="col-sm-2 col-form-label">Until</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="untilDate">
+                    </div>
+                </div>
+        
+                <!-- Add additional form fields as needed -->
+        
+                <!-- Submit Button -->
+                <div class="form-group row">
+                    
+                     <div class="col-sm-10 offset-sm-2">
+                        <a href="your_link_here" class="btn btn-primary">
+                            Submit
+                        </a>
+                    </div>
+                
+                </div>
+            </form>
+        </div>
+        </div>
+</body>
+</html>
+
+<!-- <table>
     <tr>
         <td>
-            <ul>
-                <li><a href="profile/index.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="settings/courseDetails.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
+            <div class="Navigation">
+                <ul>
+                    <li><p><i class="fa-regular fa-user" id="custom-user"></i><br>
+                        <a href="profile/index.html">Account</a></p></li>
 
-            </ul>
+                    <li><p> <i class="fa-solid fa-gauge" id="custom-board"></i> <br>
+                        <a href="#">Dashboard</a></p></li>
+
+
+
+                    <li><p><i class="fa-solid fa-book" id="custom-book"></i>
+                        <br>
+                        <a href="#">Courses</a>
+                    </p></li>
+
+                    <li><p> <i class="fa-solid fa-calendar-days" id="custom-calendar"> </i><br>
+                        <a href="#">Calendar</a>
+                    </p></li>
+
+                    <li><p> <i class="fa-solid fa-inbox" id="custom-icon"></i> <br>
+                        <a href="#">Inbox</a> </p></li>
+
+                    <li><p> <i class="fa-regular fa-clock" id="custom-clock"> </i> <br>
+                        <a href="#">History</a> </p></li>
+
+                    <li><p> <i class="fa-solid fa-tv" id="custom-studio"></i> <br>
+                        <a href="#">Studio</a></li>
+
+                    <li><p>  <i class="fa-solid fa-right-from-bracket" id="custom-common"></i><br>
+                        <a href="#">Commons</a></li>
+                    </p>
+                    <li><p> <i class="fa-solid fa-circle-question" id="custom-help"></i>
+                        <br> <a href="#">Help</a></p></li>
+
+                </ul>
+            </div>
         </td>
         <td>
-            <ul>
-                <li><a href="../home.html">Home</a></li>
-                <li><a href="#">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="index.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="../grades.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
+            <div class="account-navigation">
+                <ul>
+                    <li><a href="#">Notifications</a></li>
+                    <li class="selected"><a href="index.html">Profile</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">ePortfolios</a></li>
+                    <li><a href="#">Shared Content</a></li>
+                    <li><a href="#">The Hub</a></li>
+                    <li><a href="#">Qwickly Course Tools</a></li>
+                    <li><a href="#">Global Announcements</a></li>
+                </ul>
+            </div>
         </td>
 
         <td>
@@ -131,15 +355,12 @@
                 <input type="date" id="untilDate" name="untilDate">
             </div>
 
-            <!-- Add more input fields for other fields as needed -->
+            Add more input fields for other fields as needed 
             <div>
-                <button id="cancelBtn">Cancel</button>
-                <button id="saveBtn">Save</button>
+                <button id="cancelBtn"><a href="index.html">Cancel</a></button>
+                <button id="saveBtn"><a href="index.html">Save</a></button>
             </div>
             </form>
         </td>
     </tr>
-</table>
-
-</body>
-</html>
+</table> -->

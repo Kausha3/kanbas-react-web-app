@@ -2,84 +2,153 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Edit User Profile</title>
+   
+  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="profileCSS.css"
+  rel="stylesheet"/>
+
+
 </head>
 <body>
 <table>
   <tr>
     <td>
-      <ul>
-        <li><a href="profile/index.html">Account</a></li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="settings/courseDetails.html">Courses</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Studio</a></li>
-        <li><a href="#">Commons</a></li>
-        <li><a href="#">Help</a></li>
+      <div class="profile-pic">
+        <div class="Navigation">
+        <ul>
+          <li class="navSelected">
+            <p><i class="fa-regular fa-user" id="custom-user"></i><br>
+            <a href="index.html">Account</a></p></li>
 
-      </ul>
+          <li><p> <i class="fa-solid fa-gauge" id="custom-board"></i> <br>
+            <a href="../dashboard.html">Dashboard</a></p></li>
+
+          <li><p><i class="fa-solid fa-book" id="custom-book"></i>
+            <br>
+            <a href="../courses/home.html">Courses</a>
+          </p></li>
+
+          <li><p> <i class="fa-solid fa-calendar-days" id="custom-calendar"> </i><br>
+            <a href="#">Calendar</a>
+          </p></li>
+
+          <li><p> <i class="fa-solid fa-inbox" id="custom-icon"></i> <br>
+            <a href="#">Inbox</a> </p></li>
+
+          <li><p> <i class="fa-regular fa-clock" id="custom-clock"> </i> <br>
+            <a href="#">History</a> </p></li>
+
+          <li><p> <i class="fa-solid fa-tv" id="custom-studio"></i> <br>
+            <a href="#">Studio</a></li>
+
+          <li><p>  <i class="fa-solid fa-right-from-bracket" id="custom-common"></i><br>
+            <a href="#">Commons</a></li>
+          </p>
+          <li><p> <i class="fa-solid fa-circle-question" id="custom-help"></i>
+            <br> <a href="#">Help</a></p></li>
+
+        </ul>
+      </div>
     </td>
     <td>
-      <ul>
-        <li><a href="../home.html">Home</a></li>
-        <li><a href="#">Modules</a></li>
-        <li><a href="#">Piazza</a></li>
-        <li><a href="#">Zoom Meetings</a></li>
-        <li><a href="assignments/index.html">Assignments</a></li>
-        <li><a href="#">Quizzes</a></li>
-        <li><a href="../grades.html">Grades</a></li>
-        <li><a href="#">People</a></li>
-        <li><a href="#">Panopto Video</a></li>
-        <li><a href="#">Discussions</a></li>
-        <li><a href="#">Announcements</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Files</a></li>
-        <li><a href="#">Rubrics</a></li>
-        <li><a href="#">Outcomes</a></li>
-        <li><a href="#">Collaborations</a></li>
-        <li><a href="#">Syllabus</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
+      <div class="account-navigation">
+
+        <ul>
+          <li><a href="#">Notifications</a></li>
+          <li class="selected"><a href="index.html">Profile</a></li>
+          <li><a href="#">Files</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">ePortfolios</a></li>
+          <li><a href="#">Shared Content</a></li>
+          <li><a href="#">The Hub</a></li>
+          <li><a href="#">Qwickly Course Tools</a></li>
+          <li><a href="#">Global Announcements</a></li>
+        </ul>
+      </div>
     </td>
     <td>
-      <h2> Kausha Trivedi</h2>
+      
+        <i class="fa fa-user" id="custom-pic" aria-hidden="true"></i>
+  
+        
+      <h3> Kausha Trivedi</h3>
       <form>
-        <label for="text-fields-name">Name:*</label>
-        <input type="text" id="text-fields-name"
-               title="John" value="Kausha Trivedi "/><br/>
+        <div class="form-group">
+          <label for="name">Name:* </label>
+          <input type="text" class="form-control" id="name" value="Kausha Trivedi">
+        </div>
 
-        <label for="text-fields-pronouns">Pronouns</label>
-        <select id="text-fields-pronouns">
-          <option value="none">None</option>
-        </select>
-        <br>
+        <div class="form-group">
+          <label for="pronouns">Pronouns</label>
+          <select class="form-control" id="pronouns">
+            <option selected value="none">None</option>
+          </select>
+        </div>
 
-        <label for="text-fields-title">Title</label>
-        <input type="text" id="text-fields-title"
-               title="John"/><br/>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title">
+        </div>
 
         <h3> Contact </h3>
         <p>No registered services, you can add some on the settings page.</p>
 
-        <h3>Biography</h3>
+        <h4>Biography</h4>
         <p>MSCS Student@ NEU</p>
-        <label>
-          <textarea cols="30" rows="3">MSCS Student@ NEU</textarea>
-        </label>
+        <textarea class="form-control" rows="5" >MSCS Student@ NEU</textarea>
 
-        <h3>Links</h3>
-        <a href="#"><p>LinkedIn Link</p></a>
+        <h4>Links</h4>
+        <div class="row">
+          <div class="col">
+            <p><strong>Title</strong></p>
+            <input type="text" class="form-control" value="Youtube">
+          </div>
 
-        <button>Add another link</button>
-        <input type="submit" value="Save Profile">
+          <div class="row">
+            <div class="col text-center">
+              <p class="arrow"><i class="fas fa-arrow-right"></i></p>
+            </div>
+          </div>
 
-          <button><a href="index.html"> Cancel Editing</a></button>
+          <div class="col">
+            <p><strong>URL</strong></p>
+            <input type="text" class="form-control" value="https://youtube.com">
+          </div>
+          
+        </div>
+        <button class="btn btn-primary" id="addLink">Add Another Link</button>
+
+        
+        <br>
+        <br>
+
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a href="index.html" class="btn btn-primary ">Cancel</a>
+            </div>
+            <div class="col">
+              <a href="index.html" class="btn btn-secondary btn-red-bg"> <i class="fas fa-save"></i>Save Profile</a>
+            </div>
+          </div>
+        </div>
+
+    
       </form>
+    </td>
+    <td>
+      <a href="index.html" class="btn btn-danger float-end" id="cancelButton">
+        <i class="fas fa-pencil"></i> Cancel Editing
+      </a>
+    </div>
+</div>
     </td>
     </td>
   </tr>
 </table>
+<script src="https://kit.fontawesome.com/9512067f90.js" crossorigin="anonymous"></script>
 </body>
 </html>

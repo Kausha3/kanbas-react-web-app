@@ -1,118 +1,179 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Assignments</title>
+    <script src="https://kit.fontawesome.com/9512067f90.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="index.css" rel="stylesheet" />
 </head>
+
 <body>
-<table>
-  <tr>
-    <td>
-      <ul>
-        <li><a href="profile/index.html">Account</a></li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="settings/courseDetails.html">Courses</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Studio</a></li>
-        <li><a href="#">Commons</a></li>
-        <li><a href="#">Help</a></li>
 
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li><a href="../home.html">Home</a></li>
-        <li><a href="#">Modules</a></li>
-        <li><a href="#">Piazza</a></li>
-        <li><a href="#">Zoom Meetings</a></li>
-        <li><a href="index.html">Assignments</a></li>
-        <li><a href="#">Quizzes</a></li>
-        <li><a href="../grades.html">Grades</a></li>
-        <li><a href="#">People</a></li>
-        <li><a href="#">Panopto Video</a></li>
-        <li><a href="#">Discussions</a></li>
-        <li><a href="#">Announcements</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Files</a></li>
-        <li><a href="#">Rubrics</a></li>
-        <li><a href="#">Outcomes</a></li>
-        <li><a href="#">Collaborations</a></li>
-        <li><a href="#">Syllabus</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
-    </td>
+    <nav aria-label="breadcrumb" class="custom-breadcrumb ">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><i class="fas fa-bars"></i></li>
+            <li class="breadcrumb-item">Course Name</li>
+            <li class="breadcrumb-item">Term</li>
+            <li class="breadcrumb-item section-crumb">Section</li>
+            <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+            
+        </ol>
+        <hr class="my-1">
+        
+    </nav>
+    
+    
+    <div class="container-fluid">
+        <div class="row">
+            <br>
+            <br>
+            <div class="col-1 Navigation">
+                <div class="link-container">
+                    <!-- ... (left Navigation content unchanged) ... -->
 
-    <td>
-      <input type="text" placeholder="Search for Assignments">
-      <button>Group</button>
-      <button>Assignment</button>
-      <button> Edit Assignment Dates </button>
+                        <ul>
+                            <li>
+                                <div class="block-container">
+                                <p><i class="fa-regular fa-user" id="custom-user"></i><br>
+                                <a href="../profile/index.html">Account</a></p>
+                            </div>
+                            </li>
+        
+                            <li><div class="block-container"> <p><i class="fa-solid fa-gauge" id="custom-board"></i> <br>
+                                <a href="../dashboard.html">Dashboard</a></p></div></li>
+        
+                            <li class="navSelected">
+                                <div class="block-container"><p><i class="fa-solid fa-book" id="custom-book"></i>
+                                <br>
+                                <a href="../courses/home.html">Courses</a>
+                            </p>
+                        </div>
+                        </li>
+        
+                            <li><div class="block-container">
+                                <p><i class="fa-solid fa-calendar-days" id="custom-calendar"> </i><br>
+                                <a href="#">Calendar</a>
+                            </p></div></li>
+        
+                            <li><div class="block-container"><p><i class="fa-solid fa-inbox" id="custom-icon"></i> <br>
+                                <a href="#">Inbox</a></p></div></li>
+        
+                            <li><div class="block-container"><p><i class="fa-regular fa-clock" id="custom-clock"> </i> <br>
+                                <a href="#">History</a></p></div></li>
+        
+                            <li><div class="block-container"><p><i class="fa-solid fa-tv" id="custom-studio"></i> <br>
+                                <a href="#">Studio</a></div></li>
+        
+                            <li><div class="block-container"><p><i class="fa-solid fa-right-from-bracket" id="custom-common"></i><br>
+                                <a href="#">Commons</a></div></li>
+                            </p>
+                            <li><div class="block-container"><p><i class="fa-solid fa-circle-question" id="custom-help"></i>
+                                <br> <a href="#">Help</a></p></div>
+                            </li>
+                            </ul>
+                </div>
+            </div>
+            <div class="col-2 account-navigation">
+                
+                <ul class="list-group">
+                    <!-- ... (account navigation content unchanged) ... -->
+                
+                            <li><a href="../courses/home.html">Home</a></li>
+                            <li><a href="#">Modules</a></li>
+                            <li><a href="#">Piazza</a></li>
+                            <li><a href="#">Zoom Meetings</a></li>
+                            <li class="selected"><a href="index.html">Assignments</a></li>
+                            <li><a href="#">Quizzes</a></li>
+                            <li><a href="../courses/grades.html">Grades</a></li>
+                            <li><a href="#">People</a></li>
+                            <li><a href="#">Panopto Video</a></li>
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Announcements</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Files</a></li>
+                            <li><a href="#">Rubrics</a></li>
+                            <li><a href="#">Outcomes</a></li>
+                            <li><a href="#">Collaborations</a></li>
+                            <li><a href="#">Syllabus</a></li>
+                            <li><a href="../courses/courseDetails.html">Settings</a></li>
+        
+                </ul>
+            </div>
+            <div class="col-8">
+                <div class="d-flex justify-content-between align-items-center">
+                    <input type="text" class="form-control w-25 mb-0" placeholder="Search for Assignments">
+                             
+                    <div>
+                        <button class="btn btn-secondary mr-2">+Group</button>
+                        <button class="btn btn-danger mr-2 ">+Assignment</button>
+                        <button class="btn btn-secondary">:</button>
+                    </div>
+                </div>
+                <hr class="my-2">
+                
+                
+                <div class="mb-4">
+                    <div class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0 ">ASSIGNMENTS</h4>
+                        <div>
+                            <span class="mb-0 rounded p-8 bg-light mr-3"> 40% of Total </span>
+                           
+                        </div>
+                    </div>
+                    
+                
+                    <ul class="list-group">
+                        
+                        <a href="assignment-edit.html"> <li class="list-group-item green-border-left">
+                            <i class="fa-solid fa-file-lines"></i>
+                            A1 - ENV + HTML
+                            <small class="text-muted">Week 0 - SETUP</small>
+                        </li>
+                        </a>
+                        <a href="assignment-edit.html"><li class="list-group-item green-border-left">
+                            <i class="fa-solid fa-file-lines"></i>
+                            A2 - CSS + BOOTSTRAP
+                            <small class="text-muted">Multiple Modules | Not Available</small>
+                        </li>
+                    </a>
 
-      <h4>ASSIGNMENTS 40% of Total
-      <Select><option selected value="edit">
-      Edit</option> </Select>
-      </h4>
-      <ul>
-        <li><a href="assignment-edit.html">A1 - ENV + HTML</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-        <li><a href="assignment-edit.html">A2 - CSS + BOOTSTRAP</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-        <li><a href="assignment-edit.html">A3 - JS + REACT</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-        <li><a href="assignment-edit.html">A4 - STATE + REDUX</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-        <li><a href="assignment-edit.html">A5 - NODE + SESSION</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-        <li><a href="assignment-edit.html">A6 - MONGO + MONGOOSE</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-      </ul>
+                    <a href="assignment-edit.html">
+                        <li class="list-group-item green-border-left">
+                            <i class="fa-solid fa-file-lines"></i>
+                            A3 - JS + REACT
+                            <small class="text-muted">Multiple Modules | Not Available</small>
+                        </li>
+                    </a>
+                    
+                    <a href="assignment-edit.html">
+                        <li class="list-group-item green-border-left">
+                            <i class="fa-solid fa-file-lines"></i>
+                           A4 - STATE + REDUX
+                            <small class="text-muted">Multiple Modules | Not Available</small>
+                        </li>
+                    </a>
+                    <a href="assignment-edit.html">
+                        <li class="list-group-item green-border-left">
+                            <i class="fa-solid fa-file-lines"></i>
+                            A5 - NODE + SESSION
+                            <small class="text-muted">Multiple Modules | Not Available</small>
+                        </li>
+                    </a>
+                    <a href="assignment-edit.html">
+                        <li class="list-group-item green-border-left">
+                            <i class="fa-solid fa-file-lines"></i>
+                            A6 - MONGO + MONGOOSE
+                            <small class="text-muted">Multiple Modules | Not Available</small>
+                        </li>
+                    </a>
 
-
-      <h4>QUIZZES 10% of Total
-        <Select><option selected value="edit">
-          Edit</option> </Select>
-      </h4>
-      <ul>
-        <li><a href="#">Q1-HTML</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-        <li><a href="#">Q2-CSS</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-        <li><a href="#">Q3-JS</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-        <li><a href="#">Q4-Node</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-        <li><a href="#">Q5-MONGO</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-      </ul>
-
-      <h4>EXAMS 20% of Total
-        <Select><option selected value="edit">
-          Edit</option> </Select>
-      </h4>
-
-      <ul>
-        <li><a href="#">Midterm</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-        <li><a href="#">Finals</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-      </ul>
-
-      <h4>PROJECT 30% of Total
-        <Select><option selected value="edit">
-          Edit</option> </Select>
-      </h4>
-
-      <ul>
-        <li><a href="#">Project</a></li>
-        <a href="#"> Multiple Modules</a> | Not Available
-      </ul>
-    </td>
-
-
-  </tr>
-</table>
-
+        
+                    </ul>
+                </div>
+    </div>
 </body>
+
 </html>
