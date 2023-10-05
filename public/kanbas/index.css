@@ -356,8 +356,8 @@ body, ul, li {
 .Navigation ul li .block-container:hover a {
     color :red ;
     background-color: white;
-    width: 72px;
-    border-radius: 5px;
+    width: 85px;
+    border-radius: 8px;
     
 }
 
