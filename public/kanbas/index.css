@@ -2,16 +2,23 @@
 /**
     For Navigation bar
 */
+.custom {
+    font-size: 32px; /* Increase the font size for a larger icon */
+    color: red;
+}
+.account {
+    font-size: 32px; /* Increase the font size for a larger icon */
+    color: grey;
+}
 
 
-
-/* Add CSS for the Navigation */
 .Navigation {
-    width: 75px;
+    position: absolute;
+    width: 80px;
     background-color: black;
     color: white;
     padding: 10px;
-    position: absolute;
+    margin-top: -63px;
    
 }
 
@@ -28,7 +35,7 @@
     display: block;
     text-decoration: none;
     color: white;
-    padding: 5px 0;
+    padding: 8px 0;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -39,27 +46,10 @@
 .Navigation ul li .block-container:hover a {
     color :red ;
     background-color: white;
-    width: 72px;
+    width: 75px;
     border-radius: 5px;
     
 }
-
-/* Reset default browser styles */
-body, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-
-.content {
-    margin-bottom: 350px; /* Adjust as needed to make space for the Navigation */
-    padding: 5px;
-}
-
-.content ul {
-    list-style: none;
-}
-
 
 .account-navigation {
     display: absolute;
@@ -86,56 +76,35 @@ body, ul, li {
     padding-left: 10px; /* Space between the left border and link text */
 }
 
+/* Reset default browser styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+.content {
+    margin-bottom: 350px; /* Adjust as needed to make space for the Navigation */
+    padding: 5px;
+}
+
+.content ul {
+    list-style: none;
+}
+
+
+
 #custom-pic {
     font-size: 150px; /* Increase the font size for a larger icon */
     color: gray;
 
 }
-.profile-pic {
-    margin-bottom: 200px;
-}
-
-.edit-button {
-    margin-bottom: 600px;
-}
 
 
-.edit-button {
-    text-align: center; /* Center the content horizontally */
-    margin-top: 10px; /* Add some top margin for spacing */
-}
 
-/* Style the Edit Profile button and its icon */
-.edit-profile-link {
-    text-decoration: none;
-    font-family: serif;
-    border: none; /* Remove the button border */
-    padding: 10px 20px; /* Adjust padding as needed */
-    border-radius: 5px; /* Add rounded corners */
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
-}
 
-.arrow {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 40px;
 
-}
 
-/* Style the Edit Profile icon */
-.fa-solid.fa-pencil {
-    margin-right: 5px; /* Add some space between the icon and text */
-}
-
-#cancelButton {
-    margin-bottom: 800px;
-}
-
-.btn-red-bg {
-    background-color: red;
-    color: white; /* You can also adjust the text color */
-  }
 
   /** 
     Dashboard
@@ -159,6 +128,12 @@ body, ul, li {
     margin-top: 30px; /* Add spacing */
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .dashboard-hr {
     margin-bottom: 20px;
     border: none;
@@ -166,73 +141,29 @@ body, ul, li {
     background-color: black; /* Color of the horizontal rule */
 }
 
-
-
 .published-courses-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin-left: 270px;
+    gap: 30px; /* This ensures there's a gap of 30px between each course */
     margin-left: -10px; /* Offset for Bootstrap's default margin */
     margin-right: -15px; /* Offset for Bootstrap's default margin */
 }
-
-.course-item {
-    width: calc(25% - 30px); /* 4 courses per row when window is widest */
-    margin: 15px; /* Spacing between courses */
+.card {
+    width: 250px; /* Set the min-width */
+    max-width: 270px; /* Set the max-width */
 }
 
-@media (max-width: 991px) {
-    .course-item {
-        width: calc(33.33% - 30px); /* 3 courses per row when window shrinks */
-    }
-}
-
-@media (max-width: 767px) {
-    .course-item {
-        width: calc(50% - 30px); /* 2 courses per row when window shrinks further */
-    }
-}
-
-@media (max-width: 400px) {
-    .course-item {
-        width: 100%;
-    }
-}
-
-/* Basic styles for your layout */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.kanbas-navigation,
-.course-navigation,
-.modules,
-.buttons {
-    flex: 1;
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-
-/* Media queries for responsive design */
+/* Responsive Design */
 @media (max-width: 1200px) {
-    /* Hide buttons when the window width is below 1200px */
-    .buttons {
-        display: none;
+    .published-courses-grid {
+        justify-content: space-between;
     }
 }
-
-@media (max-width: 800px) {
-    /* Hide Kanbas and Course Navigation when the window width is below 800px */
-    .kanbas-navigation,
-    .course-navigation {
-        display: none;
-    }
-    /* Expand Modules to take the entire width */
-    .modules {
-        flex-basis: 100%;
+@media (max-width: 900px) {
+    .published-courses-grid {
+        justify-content: center;
     }
 }
 
@@ -240,65 +171,16 @@ body, ul, li {
 
 
 
-#custom-calendar {
-    font-size: 32px; /* Increase the font size for a larger icon */
-    color: red;
-}
-
-#custom-icon {
-    font-size: 32px; /* Increase the font size for a larger icon */
-    color: red;     /* Change the color to red */
-}
-
-#custom-book {
-    font-size: 32px; /* Increase the font size for a larger icon */
-    color: red;     /* Change the color to red */
-}
-
-#custom-board {
-    font-size: 32px; /* Increase the font size for a larger icon */
-    color: red;     /* Change the color to red */
-}
-
-#custom-clock {
-    font-size: 32px; /* Increase the font size for a larger icon */
-    color: red;     /* Change the color to red */
-}
-
-#custom-studio {
-    font-size: 32px; /* Increase the font size for a larger icon */
-    color: red;     /* Change the color to red */
-}
-
-#custom-common {
-    font-size: 32px; /* Increase the font size for a larger icon */
-    color: red;     /* Change the color to red */
-}
-
-#custom-help {
-    font-size: 32px; /* Increase the font size for a larger icon */
-    color: red;     /* Change the color to red */
-}
-
-#custom-user {
-    font-size: 32px; /* Increase the font size for a larger icon */
-    color: gray;
-}
-
-/* Reset default browser styles */
-body, ul, li {
-    margin: 0;
-    padding: 0;
-}
 
 
 /* Add CSS for the Navigation */
 .Navigation {
-    width: 75px;
+    width: 83px;
     background-color: black;
     color: white;
-    padding: 10px;
-    margin-top: -63px;
+    padding: 5px;
+    text-align: center;
+   
 }
 
 .Navigation ul {
@@ -318,19 +200,49 @@ body, ul, li {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/*.Navigation a:hover {*/
-/*    background-color: white;*/
-/*    color: red;*/
-/*    border-radius: 5px;*/
-/*}*/
+.Navigation ul li .block-container:hover {
+    background-color: white;
+    color: red;
+    border-radius: 5px;
+}
+.Navigation ul li .block-container .navSelected   {
+    background-color: white;
+    color :red;
+    border-radius: 5px;
+}
 
-/*.Navigation a i:hover {*/
-/*    background-color: white;*/
-/*    color: red;*/
-/*    border-radius: 5px;*/
-/*}*/
+.Navigation ul li .block-container:hover p,
+.Navigation ul li .block-container:hover a {
+    color: red; /* Change the text color to red when the block is hovered */
+}
 
-/* Add CSS for the content area */
+.account-navigation {
+    width: 190px; /* Set the desired width */
+    padding: 20px; /* Adjust padding as needed */
+    margin-bottom: 350px;
+}
+
+.account-navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.account-navigation ul li {
+    margin-bottom: 15px; /* Space between links */
+}
+
+.account-navigation ul li a {
+    text-decoration: none; /* Remove underlines */
+    color: red; /* Default text color for non-selected links */
+    display: block;
+    text-align: left;
+}
+
+.account-navigation ul li.selected a {
+    color: black; /* Selected link text color */
+    border-left: 5px solid black; /* Black border to indicate selected link */
+    padding-left: 10px; /* Space between the left border and link text */
+}
 .content {
     margin-bottom: 350px; /* Adjust as needed to make space for the Navigation */
     padding: 5px;
@@ -513,14 +425,3 @@ body, ul, li {
     padding: 0 0.5rem; /* Space around the > character */
 }
 
-.custom-width {
-    width: 150px !important;  /* Use !important to override any existing styles if necessary */
-}
-
-.fa-file-lines {
-    color: green;
-}
-
-h4 {
-    font-size: 20px;
-}
