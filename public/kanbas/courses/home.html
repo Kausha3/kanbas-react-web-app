@@ -22,12 +22,16 @@
         <hr class="my-1">
         
       </nav>
+
+
+
+    
     <div class="container-fluid">
 
         <div class="row">
             
             <!-- Kansas Navigation Bar -->
-            <div class="col-1 first">
+            <div class="column col-1 first" id="kanbas-nav">
 
                 <!-- Your Kansas Navbar content here -->
                 <div class="Navigation">
@@ -108,11 +112,11 @@
     
                     </ul>
                 </div>
-                <button class="close-button">X</button>
+                <button id="course-close" class="close-button">X</button>
             </div>
 
             <!-- Breadcrumbs and Sidebar -->
-            <div class="col-2 second">
+            <div class="column col-2 second" id="course-nav">
                 
                 <!-- Sidebar (Account Navigation) -->
                 <div class="account-navigation">
@@ -138,12 +142,12 @@
                                 <li><a href="#">Syllabus</a></li>
                                 <li><a href="courseDetails.html">Settings</a></li>
                             </ul>
-                            <button class="close-button">X</button>
+                            <button id="course-close" class="close-button">X</button>
                         </div>
             </div>
 
             <!-- Weeks -->
-            <div class="col-6 third">
+            <div class="column col-6 third">
                 <!-- Your Weeks content here -->
                 <div class="container mt-5">
                     
@@ -153,6 +157,7 @@
                         <button class="btn btn-secondary dropdown-toggle float-end" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Publish All
                         </button>
+                        <div class="clearfix"></div>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
@@ -214,7 +219,7 @@
             </div>
             
             <!-- Rightmost Column (Course Status, Coming Up, etc.) -->
-            <div class="col-2 fourth">
+            <div class="column col-2 fourth">
                 <!-- Course Status -->
                 <h2 class="mt-4">Course Status</h2>
                 <div class="mb-3 row">
@@ -247,41 +252,37 @@
             </div>
         
         </div>
-        <button id="sandwichIcon">☰</button>
-    <button id="chevronIcon">»</button>
+        <button class="btn btn-primary d-block d-md-none" id="kanbas-toggler">☰</button>
+    <button class="btn btn-primary d-block d-md-none" id="course-toggler">»</button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
 // Toggle the Kansas Navigation Bar
-document.getElementById('sandwichIcon').addEventListener('click', function() {
-    const kansasNav = document.querySelector('.first');  // Use the correct selector
-    if (kansasNav.style.display === 'none' || kansasNav.style.display === '') {
-        kansasNav.style.display = 'block';
-    } else {
-        kansasNav.style.display = 'none';
-    }
-});
-
-// Toggle the Sidebar
-document.getElementById('chevronIcon').addEventListener('click', function() {
-    const courseNav = document.querySelector('.second');  // Use the correct selector
-    if (courseNav.style.display === 'none' || courseNav.style.display === '') {
-        courseNav.style.display = 'block';
-    } else {
-        courseNav.style.display = 'none';
-    }
-});
-
-// Close Navigation functionality
-let closeButtons = document.querySelectorAll('.close-button');
-for (let button of closeButtons) {
-    button.addEventListener('click', function() {
-        button.parentElement.style.display = 'none';
+// Toggle the Kansas Navigation Bar
+$(document).ready(function() {
+    // Toggle Kanbas Navigation
+    $("#kanbas-toggler").click(function() {
+        $("#kanbas-nav").toggle();  // Use toggle() to hide/show
+        $("#course-nav").hide();    // Hide other nav if open
     });
-}
 
+    $("#kanbas-close").click(function() {
+        $("#kanbas-nav").hide();
+    });
+
+    // Toggle Course Navigation
+    $("#course-toggler").click(function() {
+        $("#course-nav").toggle();  // Use toggle() to hide/show
+        $("#kanbas-nav").hide();    // Hide other nav if open
+    });
+
+    $("#course-close").click(function() {
+    $("#course-nav").hide();
+});
+
+});
 
 </script>
 
