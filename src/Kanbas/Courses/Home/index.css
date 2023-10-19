@@ -1,0 +1,40 @@
+.first {
+    display: block;
+  }
+  .second {
+    display: block;
+  }
+  .third {
+    display: block;
+  }
+  .sandwich-icon {
+    display: none;
+  }
+  .chevron-icon {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .first {
+      display: none;
+    }
+    .third {
+      display: block;
+    }
+    .sandwich-icon {
+      display: block;
+    }
+  }
+  @media (max-width: 480px) {
+    .first {
+      display: none;
+    }
+    .second {
+      display: none;
+    }
+    .third {
+      display: block;
+    }
+    .chevron-icon {
+      display: block;
+    }
+  }

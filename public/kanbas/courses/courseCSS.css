@@ -695,19 +695,6 @@ body, ul, li {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/*.Navigation a:hover {*/
-/*    background-color: white;*/
-/*    color: red;*/
-/*    border-radius: 5px;*/
-/*}*/
-
-/*.Navigation a i:hover {*/
-/*    background-color: white;*/
-/*    color: red;*/
-/*    border-radius: 5px;*/
-/*}*/
-
-/* Add CSS for the content area */
 .content {
     margin-bottom: 350px; /* Adjust as needed to make space for the Navigation */
     padding: 5px;
