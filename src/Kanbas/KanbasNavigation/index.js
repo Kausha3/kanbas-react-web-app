@@ -46,7 +46,7 @@
         <div className="Navigation">
           <ul>
             <li>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Northeastern_seal.svg/1920px-Northeastern_seal.svg.png" width="80px" height="80px" style={{ backgroundColor: 'aliceblue' , marginTop:-10, marginLeft:-6}} />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Northeastern_seal.svg/1920px-Northeastern_seal.svg.png" width="80px" height="80px" alt="NEU Logo" style={{ backgroundColor: 'aliceblue' , marginTop:-10, marginLeft:-6}} />
             </li>
             {links.map((link, index) => (
               <li key={index} className={isHighlighted(link) ? "navSelected" : ""}>
