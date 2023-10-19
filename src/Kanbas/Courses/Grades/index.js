@@ -7,7 +7,7 @@ import './index.css';
 
 function Grades() {
   let  { courseId } = useParams();
-  if(courseId == '*') {
+  if(courseId === '*') {
     courseId = db.modules[0].course;
  }
   

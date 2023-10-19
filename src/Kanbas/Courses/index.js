@@ -9,8 +9,6 @@ import Grades from "./Grades";
 
 
 function Courses() { 
-  const { courseId } = useParams();
-  const course = db.courses;
   
   return (
     <div>

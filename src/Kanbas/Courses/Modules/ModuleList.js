@@ -8,7 +8,7 @@ export let courseId;
 function ModuleList() {
   let { courseId } = useParams();
   let modules;
-  if(courseId == '*') {
+  if(courseId === '*') {
      courseId = db.modules[0].course;
   }
 
