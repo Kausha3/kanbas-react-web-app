@@ -27,9 +27,9 @@ modules = db.modules.filter((module) => module.course === courseId);
                     
                         <div class="clearfix"></div>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <button class="dropdown-item" >Action</button>
+                            <button class="dropdown-item" >Another action</button>
+                            <button class="dropdown-item" >Something else here</button>
                           
                         </div>
                      

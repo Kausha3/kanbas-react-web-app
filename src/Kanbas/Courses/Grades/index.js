@@ -27,8 +27,8 @@ function Grades() {
           </button>
           <button className="btn btn-success dropdown-toggle mr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
           <div className="dropdown-menu">
-            <a className="dropdown-item" href="#">Option 1</a>
-            <a className="dropdown-item" href="#">Option 2</a>
+            <button className="dropdown-item" >Option 1</button>
+            <button className="dropdown-item" >Option 2</button>
           </div>
         </div>
         <button className="btn btn-info">

@@ -12,21 +12,21 @@ function HomeStatus() {
         </div>
         
         <ul class="list-group mb-4">
-            <li class="list-group-item"><a href="#">Importing Existing content</a></li>
-            <li class="list-group-item"><a href="#">Import from Commons</a></li>
-            <li class="list-group-item"><a href="#">Choose from Home Page</a></li>
-            <li class="list-group-item"><a href="#">View Course Stream</a></li>
-            <li class="list-group-item"><a href="#">New Announcement</a></li>
-            <li class="list-group-item"><a href="#">New Analytics</a></li>
-            <li class="list-group-item"><a href="#">View Course Notifications</a></li>
+            <li class="list-group-item"><button href="#">Importing Existing content</button></li>
+            <li class="list-group-item"><button>Import from Commons</button></li>
+            <li class="list-group-item"><button>Choose from Home Page</button></li>
+            <li class="list-group-item"><button>View Course Stream</button></li>
+            <li class="list-group-item"><button>New Announcement</button></li>
+            <li class="list-group-item"><button>New Analytics</button></li>
+            <li class="list-group-item"><button>View Course Notifications</button></li>
         </ul>
 
         <h2 class="mt-4">Coming Up</h2>
-        <a class="text-red mb-3 d-block" href="#">View Calendar</a>
+        <button class="text-red mb-3 d-block">View Calendar</button>
         <ul class="list-unstyled">
-            <li class="mb-1"><a class="text-red" href="#">Lecture CS5610 Sep7 at 11:45 am</a></li>
-            <li class="mb-1"><a class="text-red" href="#">Lecture CS4550 Sep 11 at 11:45 am</a></li>
-            <li class="mb-1"><a class="text-red" href="#">Lecture CS5610 Sep 11 at 6 pm</a></li>
+            <li class="mb-1"><button class="text-red">Lecture CS5610 Sep7 at 11:45 am</button></li>
+            <li class="mb-1"><button class="text-red">Lecture CS4550 Sep 11 at 11:45 am</button></li>
+            <li class="mb-1"><button class="text-red">Lecture CS5610 Sep 11 at 6 pm</button></li>
         </ul>
 </div>
     );
