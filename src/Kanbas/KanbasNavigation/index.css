@@ -60,3 +60,30 @@
 .Navigation ul li .block-container:hover a {
     color: red; /* Change the text color to red when the block is hovered */
 }
+
+.sandwich-icon {
+    display: none;
+}
+
+.navigation-container.hidden {
+    display: none;
+  }
+
+@media (max-width: 500px) {
+
+    .sandwich-icon {
+        display: block;
+      }
+  }
+
+
+  @media (max-width: 500px) {
+    .navigation-container,.fourth {
+        display: none;
+    }
+    .third {
+        display: block;
+    }
+  
+}
+

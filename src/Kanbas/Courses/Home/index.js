@@ -1,5 +1,7 @@
 import ModuleList from "../Modules/ModuleList";
 import HomeStatus from "../HomeStatus";
+import './index.css';
+
 function Home() {
   return (
     <div class="container-fluid">

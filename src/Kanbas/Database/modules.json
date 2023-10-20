@@ -94,5 +94,89 @@
     "name": "Spacecraft Systems Engineering",
     "description": "Overview of spacecraft systems and subsystems engineering.",
     "course": "RS103"
+  },
+  {
+    "_id": "M401",
+    "name": "NASA's History",
+    "description": "An overview of NASA's history, missions, and achievements.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "name": "NASA's Formation and Early Years",
+        "description": "Learn about the formation of NASA and its early years."
+      },
+      {
+        "name": "Major NASA Missions",
+        "description": "Explore major missions conducted by NASA."
+      },
+      {
+        "name": "NASA's Impact on Science and Technology",
+        "description": "Understand the impact NASA has had on science and technology."
+      }
+    ]
+  },
+  {
+    "_id": "M402",
+    "name": "Current NASA Projects",
+    "description": "A look at current projects and research being conducted by NASA.",
+    "course": "RS104"
+  },
+  {
+    "_id": "M501",
+    "name": "HTML and CSS",
+    "description": "Basics of HTML and CSS for web development.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "name": "Introduction to HTML",
+        "description": "Learn the basics of HTML."
+      },
+      {
+        "name": "Introduction to CSS",
+        "description": "Learn the basics of CSS."
+      }
+    ]
+  },
+  {
+    "_id": "M502",
+    "name": "JavaScript and DOM",
+    "description": "Understanding JavaScript and the Document Object Model (DOM).",
+    "course": "RS105"
+  },
+  {
+    "_id": "M601",
+    "name": "Sorting Algorithms",
+    "description": "Learn about different types of sorting algorithms.",
+    "course": "RS106"
+  },
+  {
+    "_id": "M602",
+    "name": "Search Algorithms",
+    "description": "Understand different search algorithms and their applications.",
+    "course": "RS106"
+  },
+  {
+    "_id": "M701",
+    "name": "Programming Concepts",
+    "description": "Introduction to fundamental programming concepts.",
+    "course": "RS107"
+  },
+  {
+    "_id": "M702",
+    "name": "Data Structures",
+    "description": "Learn about various data structures used in computer science.",
+    "course": "RS107"
+  },
+  {
+    "_id": "M801",
+    "name": "Aircraft Design",
+    "description": "Learn the principles of aircraft design.",
+    "course": "RS108"
+  },
+  {
+    "_id": "M802",
+    "name": "Aircraft Maintenance",
+    "description": "Understand the maintenance procedures and regulations for aircraft.",
+    "course": "RS108"
   }
 ]

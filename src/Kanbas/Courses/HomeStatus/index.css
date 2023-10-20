@@ -23,3 +23,15 @@
     
     border-radius: 0px;
 }
+
+.text-red, .btnCss {
+    
+    background-color: white;
+    border: 0;
+    font-size: 15px;
+}
+
+.text-red {
+    color: red;
+}
+
