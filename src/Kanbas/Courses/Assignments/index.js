@@ -80,11 +80,8 @@ if (courseId === '*') {
               </Link>
               <FontAwesomeIcon icon={faCheck} className="checkmark-icon " />
                 <button className="btn btn-danger" onClick={(event) =>{event.preventDefault(); handleDelete(assignment._id)}}>Delete</button>
-          
               <button className="btn btn-font mr-2">:</button>
-              
               </div>
-             
              </div>
           ))}
         </ul>

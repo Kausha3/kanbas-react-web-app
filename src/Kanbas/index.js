@@ -13,9 +13,12 @@ function Kanbas() {
     name: "New Course",      number: "New Number",
     startDate: "2023-09-10", endDate: "2023-12-15",
   });
-  const addNewCourse = () => {
-    setCourses([...courses, { ...course, _id: new Date().getTime().toString() }]);
-  };
+
+
+  const addNewCourse = (courseName) => {
+    setCourses(prevCourses => [...prevCourses, { name: courseName, _id: new Date().getTime()}]);
+};
+
   const deleteCourse = (courseId) => {
     setCourses(courses.filter((course) => course._id !== courseId));
   };

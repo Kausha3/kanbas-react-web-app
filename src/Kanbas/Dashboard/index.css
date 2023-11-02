@@ -42,6 +42,7 @@
     margin-right: -15px; /* Offset for Bootstrap's default margin */
     color:rgb(23, 123, 99);
 }
+
 .card {
     width: 250px; /* Set the min-width */
     max-width: 270px; /* Set the max-width */
@@ -63,6 +64,7 @@
     font-style: none;
     
 }
+
 .card-link {
     text-decoration: none;
     color: inherit;

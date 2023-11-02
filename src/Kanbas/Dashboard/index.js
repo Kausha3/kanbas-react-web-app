@@ -48,6 +48,8 @@ function Dashboard( {
     setSelectedCourse(courseToEdit);
     setEditing(true);
   }
+  const [newCourseName, setNewCourseName] = useState('');
+
  
   return (
     <>
@@ -88,8 +90,11 @@ function Dashboard( {
           type="text" 
           className="form-control mr-3" 
           placeholder="New Course"
+          value={newCourseName}
+          onChange={(e) => setNewCourseName(e.target.value)}
+          
         />
-        <button className="btn btn-primary mr-3" onClick={addNewCourse}>Add</button>
+        <button className="btn btn-primary mr-3" onClick={() => addNewCourse(newCourseName)}>Add</button>
         <button className="btn btn-secondary" onClick={updateCourse}>Update</button>
         </div>
         {/* <button className="btn btn-primary mb-3">New Course</button> */}

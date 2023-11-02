@@ -76,9 +76,9 @@ const dispatch = useDispatch();
                         </div> */}
   <ul className="list-group mod">
       <li className="list-group-item">
-        <Button  onClick={() =>{ dispatch(addModule({ ...module, course: courseId }));
+        <Button  className="btn-space" onClick={() =>{ dispatch(addModule({ ...module, course: courseId }));
       dispatch(resetModule());}}>Add</Button>
-        <button className="btn btn-primary" onClick={() => {dispatch(updateModule(module));
+        <button className="btn btn-primary btn-space" onClick={() => {dispatch(updateModule(module));
         dispatch(resetModule());}}>
                 Update
         </button>
@@ -98,12 +98,12 @@ const dispatch = useDispatch();
          .map((module, index) => (
           <div class="list-group mt-3">
            <div key={index} className="list-group-item list-group-item-secondary">
-           <button className="btn btn-green"
+           <button className="btn btn-green btn-space"
               onClick={() => dispatch(setModule(module))}>
               Edit
             </button>
 
-           <button className="btn btn-danger"
+           <button className="btn btn-danger btn-space"
               onClick={() => dispatch(deleteModule(module._id))}>
               Delete
             </button>

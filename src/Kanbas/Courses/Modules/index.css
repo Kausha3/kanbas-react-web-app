@@ -27,19 +27,14 @@
     cursor: pointer;
   }
   
-
-
 .list-group-item a {
     color:black;
     font-style: normal;
     text-decoration: none;
 }
 
-.list-group-item-secondary {
-  background-color: #f7f7f7;
-  border-color: #e0e0e0;
-}
-button {
+
+.btn-space {
   margin-right: 10px;
   padding: 6px 12px;
  
