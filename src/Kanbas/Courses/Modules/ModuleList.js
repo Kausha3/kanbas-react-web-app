@@ -6,11 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addModule, deleteModule, updateModule, setModule,resetModule } from './modulesReducer';
 import { Button } from "react-bootstrap";
 
-
-
-
 export let courseId;
-
 
 
 function ModuleList() {

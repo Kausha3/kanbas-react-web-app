@@ -1,105 +1,102 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-
-
-
+import { useSelector, useDispatch } from "react-redux";
+import { updateAssignment } from "../assignmentsReducer";
 
 function AssignmentEditor() {
-  
-  const initialAssignmentData = useSelector((state) => state.assignmentsReducer.assignment);
-  const [assignment, setAssignment] = useState(initialAssignmentData);
+    const { assignmentId, courseId } = useParams();
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-    // const courseAssignments = useSelector((state) => state.assignmentsReducer.assignments);
-    // const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+    const initialAssignment = useSelector(state =>
+        state.assignmentsReducer.assignments.find(assignment => assignment._id === assignmentId)
+    );
+
+    const [assignment, setAssignmentState] = useState(initialAssignment || {
+        name: '',
+        course: '',
+        description: '',
+        points: ''
+    });
+
+    useEffect(() => {
+        if (initialAssignment) {
+            setAssignmentState(initialAssignment);
+        }
+    }, [initialAssignment]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setAssignment({
-          ...assignment,
-          [name]: value,
-        });
-      };
+        setAssignmentState(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(updateAssignment(assignment));
+        console.log("Assignment updated:", assignment);
+        navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+    };
 
-  const { courseId } = useParams();
-  const navigate = useNavigate();
-  const handleSave = () => {
-    console.log("Actually saving assignment TBD in later assignments");
-    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
-  };
-  return (
-    <div className="container mt-5">
+    const handleCancel = () => {
+        navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+    };
 
-        <h2 className="mb-3">Assignment Name</h2>
-        <input 
-            value={assignment.name}
-            className="form-control mb-3"
-            placeholder="Assignment Name"
-            onChange={handleChange}
-        />
-
-        <textarea 
-            value={assignment.description}
-            className="form-control mb-3"
-            rows="5"
-            placeholder="Assignment description"
-            onChange={handleChange}
-        ></textarea>
-
-        <h2 className="mb-2">Points</h2>
-        <input 
-            value={assignment.points}
-            className="form-control mb-3"
-            placeholder="Points"
-            onChange={handleChange}
-        />
-
-        <h2 className="mb-2">Assignment Group</h2>
-        <select 
-            name="assignmentGroup" 
-            id="assignmentGroup"
-            className="form-control mb-3"
-            onChange={handleChange}
-        >
-            <option value="group1">ASSIGNMENTS</option>
-        </select>
-
-        <h2 className="mb-2">Display Grade as</h2>
-        <select 
-            name="displayGradeAs" 
-            id="displayGradeAs"
-            className="form-control mb-3"
-            onChange={handleChange}
-        >
-            <option value="percentage">Percentage</option>
-        </select>
-
-        <div className="mb-3">
-            <input type="checkbox" id="countCheckbox" />
-            <label className="ms-2" htmlFor="countCheckbox">Do not count this assignment towards the final grade</label>
+    return (
+        <div className="container mt-5">
+            <h2>Edit Assignment</h2>
+            <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                    <label className="form-label">Name</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        name="name"
+                        value={assignment.name}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Course</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        name="course"
+                        value={assignment.course}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Description</label>
+                    <textarea
+                        className="form-control"
+                        name="description"
+                        value={assignment.description}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Points</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        name="points"
+                        value={assignment.points}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                {/*... other form elements...*/}
+                <button type="submit" className="btn btn-success">Save</button>
+                <button type="button" className="btn btn-danger ml-2" onClick={handleCancel}>Cancel</button>
+            </form>
         </div>
-
-        <div>
-            <Link 
-                to={`/Kanbas/Courses/${courseId}/Assignments`}
-                className="btn btn-danger mr-2"
-            >
-                Cancel
-            </Link>
-            <button 
-                onClick={handleSave} 
-                className="btn btn-success"
-            >
-                Save
-            </button>
-        </div>
-    </div>
-);
-
+    );
 }
 
-
 export default AssignmentEditor;
-

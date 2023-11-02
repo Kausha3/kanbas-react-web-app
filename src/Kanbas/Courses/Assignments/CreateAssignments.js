@@ -31,11 +31,15 @@ function CreateAssignment() {
         console.log("Submitted assignment:", assignment);
         navigate(-1);
     };
+
+    const handleCancel = () => {
+        navigate(-1);
+    };
     
 
     return (
         <div className="container mt-4">
-            <h2>Assignment Editor</h2>
+            <h2>New Assignment </h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label className="form-label">Name</label>
@@ -101,7 +105,8 @@ function CreateAssignment() {
                         required
                     />
                 </div>
-                <button type="submit" className="btn btn-primary" onClick={() => dispatch(addAssignment(assignment))}>Submit</button>
+                <button type="submit" className="btn btn-primary" >Submit</button>
+                <button type="button" className="btn btn-secondary ml-2" onClick={handleCancel}>Cancel</button>
             </form>
         </div>
     );

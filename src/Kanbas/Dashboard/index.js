@@ -9,9 +9,6 @@ function Dashboard( {
   courses, setCourses, course, setCourse, addNewCourse,
     deleteCourse, updateCourse }) {
 
-
-   
-
   
   // const [courses, setCourses] = useState(db.courses);
   // const [course, setCourse] = useState({

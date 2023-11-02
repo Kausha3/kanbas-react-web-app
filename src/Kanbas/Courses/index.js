@@ -29,10 +29,11 @@ function Courses({ courses }) {
             <Route path="Home" element={<Home/>} />
             <Route path="Modules" element={<Modules/>} />
             <Route path="Assignments" element={<Assignments/>} />
+            <Route path="Assignments/CreateAssignment" element={<CreateAssignment />} />
             <Route path="Assignments/:assignmentId"
                    element={<AssignmentEditor/>}/>
 
-            <Route path="CreateAssignment" element={<CreateAssignment />} />
+            
 
             <Route path="Grades" element={<Grades />} />
 

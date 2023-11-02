@@ -7,8 +7,6 @@ import { useState } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 
-
-
 function Kanbas() {
   const [courses, setCourses] = useState(db.courses);
   const [course, setCourse] = useState({

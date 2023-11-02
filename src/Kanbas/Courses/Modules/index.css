@@ -61,16 +61,6 @@ input {
   
 }
 
-.list-group-item h3,
-.list-group-item h4 {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.list-group-item p {
-  color: black;
-  font-size: 0.9rem;
-}
 
 .mod {
   margin-top: 20px;
