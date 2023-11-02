@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './index.css';
 function ArrayStateVariable() {
   const [array, setArray] = useState([1, 2, 3, 4, 5]);
   const addElement = () => {
@@ -10,12 +11,16 @@ function ArrayStateVariable() {
   return (
     <div>
       <h2>Array State Variable</h2>
-      <button onClick={addElement}>Add Element</button>
+      <button className="btn btn-green"
+      style={{borderRadius: '10px', marginBottom: '20px'}}
+       onClick={addElement}>Add Element</button>
       <ul>
         {array.map((item, index) => (
           <li key={index}>
             {item}
-            <button onClick={() => deleteElement(index)}>
+            <button className="btn btn-danger" 
+            style={{marginLeft: '10px', padding: '5px', borderRadius:'5px'}}
+            onClick={() => deleteElement(index)}>
               Delete</button>
           </li>
         ))}

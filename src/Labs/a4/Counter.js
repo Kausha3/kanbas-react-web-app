@@ -5,11 +5,11 @@ function Counter() {
   return (
     <div>
       <h2>Counter: {count}</h2>
-      <button
+      <button className="btn btn-green" style={{borderRadius: '10px', marginRight: '10px'}}
         onClick={() => { setCount(count + 1)}}>
         Up
       </button>
-      <button
+      <button className="btn btn-danger" style={{borderRadius: '10px'}}
         onClick={() => { setCount(count - 1)}}>
         Down
       </button>
