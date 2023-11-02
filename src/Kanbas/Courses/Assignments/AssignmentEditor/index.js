@@ -1,13 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import db from "../../../Database";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+
 
 
 function AssignmentEditor() {
   const { assignmentId } = useParams();
-  const assignment = db.assignments.find(
-    (assignment) => assignment._id === assignmentId);
+  const initialAssignmentData = useSelector((state) => state.assignmentsReducer.assignment);
+  const [assignment, setAssignment] = useState(initialAssignmentData);
+
+    // const courseAssignments = useSelector((state) => state.assignmentsReducer.assignments);
+    // const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setAssignment({
+          ...assignment,
+          [name]: value,
+        });
+      };
 
 
   const { courseId } = useParams();
@@ -21,9 +35,10 @@ function AssignmentEditor() {
 
         <h2 className="mb-3">Assignment Name</h2>
         <input 
-            value={assignment.title}
+            value={assignment.name}
             className="form-control mb-3"
             placeholder="Assignment Name"
+            onChange={handleChange}
         />
 
         <textarea 
@@ -31,6 +46,7 @@ function AssignmentEditor() {
             className="form-control mb-3"
             rows="5"
             placeholder="Assignment description"
+            onChange={handleChange}
         ></textarea>
 
         <h2 className="mb-2">Points</h2>
@@ -38,6 +54,7 @@ function AssignmentEditor() {
             value={assignment.points}
             className="form-control mb-3"
             placeholder="Points"
+            onChange={handleChange}
         />
 
         <h2 className="mb-2">Assignment Group</h2>
@@ -45,6 +62,7 @@ function AssignmentEditor() {
             name="assignmentGroup" 
             id="assignmentGroup"
             className="form-control mb-3"
+            onChange={handleChange}
         >
             <option value="group1">ASSIGNMENTS</option>
         </select>
@@ -54,6 +72,7 @@ function AssignmentEditor() {
             name="displayGradeAs" 
             id="displayGradeAs"
             className="form-control mb-3"
+            onChange={handleChange}
         >
             <option value="percentage">Percentage</option>
         </select>

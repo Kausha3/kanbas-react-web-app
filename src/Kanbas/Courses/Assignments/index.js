@@ -1,30 +1,43 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import {useParams } from "react-router-dom";
 import db from "../../Database";
 import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileLines } from '@fortawesome/free-solid-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+
 
 function Assignments() {
   let { courseId } = useParams();
+  const navigate = useNavigate();
+
+
+  const handleButtonClick = () => {
+    navigate("CreateAssignment");
+  };
 
   if (courseId === '*') {
     courseId = db.modules[0].course;
   }
 
-  const assignments = db.assignments;
-  const courseAssignments = assignments.filter(
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+  
+
+   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId
   );
-
+  console.log("courseAssignments", courseAssignments)
   return (
     <div className="col-8">
       <div className="d-flex justify-content-between align-items-center">
         <input type="text" className="form-control w-25 mb-0" placeholder="Search for Assignments" />
         <div>
           <button className="btn btn-secondary mr-2">+Group</button>
-          <button className="btn btn-danger mr-2">+Assignment</button>
+          <button className="btn btn-danger mr-2" onClick={handleButtonClick} >+Assignment</button>
           <button className="btn btn-secondary mr-2">:</button>
         </div>
       </div>
@@ -37,12 +50,15 @@ function Assignments() {
             <button className="btn plus">+</button>
           </div>
         </div>
+        {console.log(assignment)}
 
         <ul className="list-group">
-          {courseAssignments.map((assignment) => (
+          {courseAssignments
+          
+          .map((assignment) => (
             
            
-            <Link key={assignment._id} to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} className="list-group-item green-border-left">
+            // <Link key={assignment._id} to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} className="list-group-item green-border-left">
                 <div className="d-flex align-items-center">
                  
                  <FontAwesomeIcon icon={faFileLines} className="fa-solid fa-file-lines assignment-icon mr-3" />
@@ -57,7 +73,7 @@ function Assignments() {
               <button className="btn btn-font mr-2">:</button>
               </div>
              
-            </Link>
+            // </Link>
             
           ))}
         </ul>

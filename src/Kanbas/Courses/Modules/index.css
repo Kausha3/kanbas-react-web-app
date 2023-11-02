@@ -29,10 +29,54 @@
   
 
 
-  .list-group-item a {
+.list-group-item a {
     color:black;
     font-style: normal;
     text-decoration: none;
+}
+
+.list-group-item-secondary {
+  background-color: #f7f7f7;
+  border-color: #e0e0e0;
+}
+button {
+  margin-right: 10px;
+  padding: 6px 12px;
+ 
+}
+
+textarea,input {
+  /* display: block; */
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 10px; 
+}
+
+input {
+  display: block;
+  margin-right: 10px;
+  
+}
+
+.list-group-item h3,
+.list-group-item h4 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.list-group-item p {
+  color: black;
+  font-size: 0.9rem;
+}
+
+.mod {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px; /* rounded corners */
+  border: 1px solid #e0e0e0;
 }
 
 .fourth ul.list-group {
