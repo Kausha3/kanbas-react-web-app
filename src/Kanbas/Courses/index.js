@@ -6,7 +6,6 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";  
 import Grades from "./Grades";
-import { useParams } from "react-router-dom";
 import CreateAssignment from "./Assignments/CreateAssignments";
 
 

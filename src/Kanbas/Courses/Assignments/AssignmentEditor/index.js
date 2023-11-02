@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import db from "../../../Database";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -8,7 +7,7 @@ import { useSelector } from "react-redux";
 
 
 function AssignmentEditor() {
-  const { assignmentId } = useParams();
+  
   const initialAssignmentData = useSelector((state) => state.assignmentsReducer.assignment);
   const [assignment, setAssignment] = useState(initialAssignmentData);
 
