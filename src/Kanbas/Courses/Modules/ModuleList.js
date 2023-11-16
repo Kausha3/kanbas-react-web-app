@@ -29,7 +29,7 @@ const dispatch = useDispatch();
   };
 
   const handleUpdateModule = async () => {
-    const status = await client.updateModule(module);
+     await client.updateModule(module);
     dispatch(updateModule(module));
     dispatch(resetModule());
   };
@@ -54,7 +54,7 @@ useEffect(() => {
     .then((modules) =>
       dispatch(setModules(modules))
   );
-}, [courseId]);
+}, [courseId, dispatch]);
 
  
   return (
