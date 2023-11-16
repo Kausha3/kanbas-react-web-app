@@ -51,12 +51,9 @@ function WorkingWithArrays() {
       }
     };
     
-    
-    
-
       const deleteTodo = async (todo) => {
         try {
-          const response = await axios.delete(`${API}/${todo.id}`);
+           await axios.delete(`${API}/${todo.id}`);
           setTodos(todos.filter((t) => t.id !== todo.id));
         } catch(error) {
           console.log(error);
@@ -89,11 +86,11 @@ function WorkingWithArrays() {
   };
 
 
-  const removeTodo = async (todo) => {
-    const response = await axios
-      .get(`${API}/${todo.id}/delete`);
-    setTodos(response.data);
-  };
+  // const removeTodo = async (todo) => {
+  //   const response = await axios
+  //     .get(`${API}/${todo.id}/delete`);
+  //   setTodos(response.data);
+  // };
 
   const fetchTodoById = async (id) => {
     const response = await axios.get(`${API}/${id}`);

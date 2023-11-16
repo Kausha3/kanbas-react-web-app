@@ -36,7 +36,7 @@ if (courseId === '*') {
 }
 
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
-  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+  // const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   
 
    const courseAssignments = assignments.filter(

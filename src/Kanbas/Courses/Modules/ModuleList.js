@@ -22,7 +22,7 @@ const dispatch = useDispatch();
   }
 
   const handleDeleteModule = (moduleId) => {
-    client.deleteModule(moduleId).then((status) => {
+    client.deleteModule(moduleId).then(() => {
       dispatch(deleteModule(moduleId));
       dispatch(resetModule());
     });

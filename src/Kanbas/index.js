@@ -34,7 +34,6 @@ function Kanbas() {
 const addCourse = async (courseName) => {
   try {
     const response = await axios.post(URL, course);
-    console.log("data", response.data)
     
     // Assuming the response.data is a single course object
     setCourses(courses =>[...courses, {name: courseName, _id: response.data} ]);
@@ -48,7 +47,7 @@ const addCourse = async (courseName) => {
 
 
   const deleteCourse = async (courseId) => {
-    const response = await axios.delete(
+     await axios.delete(
       `${URL}/${course._id}`
     );
 
