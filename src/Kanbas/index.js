@@ -14,7 +14,7 @@ function Kanbas() {
 
   const API_BASE = process.env.REACT_APP_API_BASE;
 
-  const URL = `${API_BASE}/courses`;
+  const URL = `${API_BASE}/api/courses`;
 
   useEffect(() => {
     const findAllCourses = async () => {
