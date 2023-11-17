@@ -23,7 +23,7 @@ function Kanbas() {
     };
 
     findAllCourses();
-  }, []);
+  }, [URL]);
 
   const [course, setCourse] = useState({
     name: "New Course",      number: "New Number",
