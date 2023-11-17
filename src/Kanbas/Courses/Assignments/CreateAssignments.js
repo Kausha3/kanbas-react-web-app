@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router';
 import { createAssignment } from './assignmentService';
 import { useParams } from "react-router-dom";
 import db from "../../Database";
-import { findAssignmentsForCourse } from './assignmentService';
+
 
 function CreateAssignment() {
     const dispatch = useDispatch();

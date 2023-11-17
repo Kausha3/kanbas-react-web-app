@@ -26,8 +26,7 @@ export const findAssignmentsForCourse = async (courseId) => {
   
 
   export const updateAssignment = async (assignment) => {
-    const response = await axios.
-      put(`${ASSIGNMENTS_URL}/${assignment._id}`, assignment);
+    const response = await axios.put(`${ASSIGNMENTS_URL}/${assignment._id}`, assignment);
     return response.data;
   };
   
