@@ -21,7 +21,7 @@ function Kanbas() {
   };
   useEffect(() => {
     findAllCourses();
-  }, []);
+  }, [findAllCourses]);
 
   const [course, setCourse] = useState({
     name: "New Course",      number: "New Number",
