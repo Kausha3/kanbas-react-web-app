@@ -31,7 +31,7 @@ const dispatch = useDispatch();
   const handleUpdateModule = async () => {
      await client.updateModule(module);
     dispatch(updateModule(module));
-    dispatch(resetModule());
+    
   };
 
 
@@ -76,9 +76,9 @@ useEffect(() => {
   <ul className="list-group mod">
       <li className="list-group-item">
         <Button  className="btn-space" onClick={() => handleAddModule()}>Add</Button>
-        <button className="btn btn-primary btn-space" onClick={() => handleUpdateModule()}>
+        <Button className="btn btn-primary btn-space" onClick={() => handleUpdateModule()}>
                 Update
-        </button>
+        </Button>
         <input value={module.name}
           onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
         />
