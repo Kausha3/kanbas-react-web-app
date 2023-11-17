@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const API_BASE = process.env.REACT_APP_API_BASE;
+console.log(API_BASE)
 const COURSES_URL = `${API_BASE}/courses`;
 const MODULES_URL = `${API_BASE}/modules`;
 
@@ -22,7 +23,6 @@ export const createModule = async (courseId, module) => {
   );
   return response.data;
 };
-
 
 export const findModulesForCourse = async (courseId) => {
   const response = await axios.get(`${COURSES_URL}/${courseId}/modules`);
