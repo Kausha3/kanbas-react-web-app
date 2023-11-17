@@ -8,6 +8,7 @@ import CourseEdit from "./CourseEdit";
 function Dashboard( {
   courses, setCourses, course, setCourse, addNewCourse,
     deleteCourse, updateCourse }) {
+      console.log(courses);
 
 
   let numberOfCourses = courses.length;
