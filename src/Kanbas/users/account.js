@@ -42,7 +42,7 @@ function Account() {
       fetchAccount();
     }
 
-  }, []);
+  }, [id]);
   return (
     <div className="w-50">
       <h1>Account</h1>
