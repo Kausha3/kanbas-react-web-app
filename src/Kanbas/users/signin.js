@@ -31,7 +31,7 @@ function Signin() {
 
   return (
     <div>
-      <h1>Signin</h1>
+      <h1>Sign In</h1>
       <input 
         type="text"
         value={credentials.username} 
@@ -43,7 +43,7 @@ function Signin() {
         onChange={(e) => setCredentials({...credentials, password: e.target.value})}
       />
       {error && <div style={{ color: 'red' }}>{error}</div>}
-      <button onClick={signin}>Signin</button>
+      <button onClick={signin}>Sign In</button>
     </div>
   );
 }

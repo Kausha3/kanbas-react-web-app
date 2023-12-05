@@ -78,11 +78,11 @@ function Account() {
      Save
   </Button>
 
-  <Button onClick={signout}>
-    Signout
+  <Button className="btn btn-danger" onClick={signout}>
+    Sign Out
   </Button>
 
-  <Button className="yellow" onClick={goToUserTable}>Go to User Table</Button>
+  <Button className="yellow" onClick={goToUserTable}>User Table</Button>
     </div>
     </div>
     

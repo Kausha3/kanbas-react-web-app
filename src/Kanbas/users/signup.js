@@ -17,7 +17,7 @@ function Signup() {
   };
   return (
     <div>
-      <h1>Signup</h1>
+      <h1>Sign Up</h1>
       {error && <div>{error}</div>}
       <input placeholder="username"
         value={credentials.username}
@@ -30,7 +30,7 @@ function Signup() {
           ...credentials,
           password: e.target.value })} />
       <button onClick={signup}>
-        Signup
+        Sign Up
       </button>
     </div>
   );
